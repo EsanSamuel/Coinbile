@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1">
+    <title>Coinbile</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <body>
+
+        <input class="text" placeholder="Search......"id="search"> <i class="bx bx-search-alt-2" id="ii"></i>
+        <input type="file" class="file-input" accept="image/*" hidden>
+        <div class="preview-img">
+            <img src="profile.png" alt="preview-img">
+        </div>
+ 
+        <div class="note">
+        <h1 class="welcome"></h1>
+        </div>
+
+        
+        <div class="menu">
+            <h1 class="logo"><i class="bx bx-coin-stack"></i>Coinbile</h1>
+            <ul class="options">
+                <li class="option tool active"><i class="bx bx-home-alt"></i>Home</li>
+                <li class="option tool"><i class="bx bx-pie-chart-alt-2"></i>Dashboard</li>
+                <li class="option tool" onclick="openProfile()"><i class="bx bx-face"></i>Profile</li>
+                <li class="option tool"><i class="bx bx-cog"></i>Setting</li>
+                <li class="option tool" ><i class="bx bx-transfer"></i>Transactions</li>
+                <li class="option tool"><i class="bx bx-wallet"></i>Wallet</li>
+            <div class="ul">
+                <div class="dark-mode">
+                    <li class="option tool"><i class="bx bx-moon" id="moon"></i>Light-Mode</li>
+                    </div>
+                    <li class="option tool"><i class="bx bx-log-out"></i>Log-Out</li>
+                    </div>
+            </ul>
+
+            
+           
+            
+        </div>
+
+
+        <div class="cards">
+        <div class="card1">
+            <div class="cont">
+            <h3>Income</h3>
+            <h1 class="h1" id="naira1">$13,590</h1>
+            <h3>Outcome</h3>
+            <h1 class="h1" id="naira2">$5,125</h1>
+            </div>
+        </div>
+
+        <div class="card2">
+            <div class="cont">
+                <h3>Income</h3>
+                <h1 id="naira3">$11,458</h1>
+                <h3>Outcome</h3>
+                <h1 id="naira4">$10,767</h1>
+        </div>
+        </div>
+        <div class="bankcard">
+        <h1>Still no bank<br> card?</h1>
+        <h3>No problem, you don't need it</h3>
+        <button class="btn">Learn More</button>
+    </div>
+    </div>
+
+    <div class="recent">
+        <h1 class="rect">Recent Transactions</h1>
+        <div class="notes">
+       
+        </div>
+    </div>
+
+    <div class="detail">
+        <h1 class="h11">Payment Details</h1>
+        <i class="bx bx-bitcoin" id="coinicon"></i>
+        <div class="bal">
+        <h3>Balance</H3>
+        <h1 id="naira5">$28,456.87</h1>
+        </div>
+        <div class="co">
+        <h1 class="Commission"><i class="bx bx-edit-alt"></i>Commission</h1><h1 class="Commission">$34.679</h1></div>
+        <div class="co">
+        <h1 class="Commission"><i class="bx bx-archive-in"></i>Invoice</h1><h1 class="Commission">$56.438</h1></div>
+        <div class="co">
+        <h1 class="Commission"><i class="bx bx-user-voice"></i>Account</h1><h1 class="Commission">$97.987</h1></div>
+        <button class="btn2" onclick="openTransfer()">Make Transaction</button>
+
+
+        <h3 class="Totalh3">Total Deposit</h3>
+            
+        <div class="chart">
+            <div class="chart1 cc keys"></div>
+            <div class="chart2 cc keys"></div>
+            <div class="chart3 cc keys"></div>
+            <div class="chart4 cc keys selected"></div>
+            <div class="chart5 cc keys"></div>
+        </div>
+
+        <div class="h33">
+            <h3>60%</h3>
+            <h3>80%</h3>
+            <h3>70%</h3>
+            <h3>100%</h3>
+            <h3>90%</h3>
+        </div>
+    </div>
+
+    <div class="profile" id="profile">
+        <i class="bx bx-x" onclick="closeProfile()" id="pppp"></i>
+        <h1 class="pp">Create a Profile</h1>
+        
+        <input type="text"  class="inputs" id="First" placeholder="Enter Firstname">
+
+        
+        <input type="text"   class="inputs" id="Sur" placeholder="Enter Surname">
+
+        
+        <input type="text" class="inputs" id="Phone" placeholder="Enter Phone No">
+
+        
+        <select id="Country" class="inputs"><br><br>
+            <option>Nigeria</option>
+            <option>USA</option>
+            <option>Ghana</option>
+            <option>South Africa</option>
+            <option>Canada</option>
+            <option>Australia</option>
+
+            
+            <input type="password" class="inputs" id="bvn" placeholder="Enter BVN">
+
+            <button class="choose">Choose profile picture</button>
+            <button class="save" onclick="closeProfile()">Save</button>
+    </div>
+
+    <div class="sendmoney" id="send">
+        <i class="bx bx-x" onclick="closeTransfer()" id="pppp" ></i>
+        <h1 class="nn">Send Money</h1>
+
+        <input type="text" class="input" id="name" placeholder="Enter Name"><br><br>
+
+        
+        <input type="text" class="input" id="Acct" placeholder="Enter Acct No."><br><br>
+
+        
+        <input type="text" class="input" id="Amount" placeholder="Enter Amount"><br><br>
+        <button class="submit" onclick="openSuccess()">Send</button>
+    </div>
+
+    <div class="success" id="success">
+        <i class="bx bx-check" id="check"></i>
+        <h1 CLASS="JJ">Transaction successful!</h1>
+        <button class="save" onclick="closeSuccess()">OK</button>
+    </div>
+
+
+        <script src="script.js"></script>
+    </body>
+</html>
